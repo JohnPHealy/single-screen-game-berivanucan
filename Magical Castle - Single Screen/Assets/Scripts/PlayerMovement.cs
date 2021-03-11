@@ -49,7 +49,15 @@ public class PlayerMovement : MonoBehaviour
 		animator.SetBool("IsCrouching", isCrouching);
 	}
 
-	void FixedUpdate()
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Potion"))
+        {
+			Destroy(other.gameObject);
+        }
+    }
+
+    void FixedUpdate()
 	{
 		// Move our character
 		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
