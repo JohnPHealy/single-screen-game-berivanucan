@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -48,13 +49,17 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+   
     void Die()
     {
         Debug.Log("player died");
         animator.SetBool("isDead", true);
 
         GetComponent<Collider2D>().enabled = false;
-        Destroy(gameObject, 2);
+       
+       
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         this.enabled = false;
 
     }
