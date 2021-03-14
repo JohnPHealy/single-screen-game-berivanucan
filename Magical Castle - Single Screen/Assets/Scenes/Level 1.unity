@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 82367325}
   - component: {fileID: 82367327}
   - component: {fileID: 82367326}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 173039776}
   m_Layer: 10
   m_Name: Enemy_FlyingEye
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -954,9 +954,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.053785384, y: -0.024823904}
+  m_Offset: {x: 0.068265945, y: -0.024823904}
   serializedVersion: 2
-  m_Radius: 0.119365275
+  m_Radius: 0.12557134
 --- !u!114 &173039776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2407,7 +2407,7 @@ GameObject:
   - component: {fileID: 409569818}
   - component: {fileID: 409569817}
   - component: {fileID: 409569816}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: HealthBar_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2427,11 +2427,11 @@ RectTransform:
   m_Children:
   - {fileID: 995240842}
   m_Father: {fileID: 649921887}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.041000366, y: 0.16699982}
+  m_AnchoredPosition: {x: 0, y: 0.1571}
   m_SizeDelta: {x: 3.1841164, y: 0.92312574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409569816
@@ -2446,7 +2446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9cd4c63914394498088ba17986bd29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1843354869}
 --- !u!114 &409569817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3104,11 +3104,11 @@ Transform:
   m_LocalPosition: {x: -6.48, y: -4.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 409569815}
   - {fileID: 1934608827}
   - {fileID: 2100726753}
   - {fileID: 1377314737}
   - {fileID: 1406105621}
+  - {fileID: 409569815}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3229,7 +3229,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 100
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3292,6 +3292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d26ecefcda777a42aedde7fa1f3a011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 649921893}
   maxHealth: 5
   currentHealth: 0
   healthBar: {fileID: 995240843}
@@ -4193,7 +4194,7 @@ GameObject:
   - component: {fileID: 995240842}
   - component: {fileID: 995240844}
   - component: {fileID: 995240843}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4311,7 +4312,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 5
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7626,7 +7627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 649921887}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380267710
 GameObject:
@@ -7992,7 +7993,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 649921887}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427961228 stripped
 GameObject:
@@ -14761,7 +14762,7 @@ GameObject:
   - component: {fileID: 1676369977}
   - component: {fileID: 1676369979}
   - component: {fileID: 1676369978}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14838,9 +14839,10 @@ GameObject:
   - component: {fileID: 1694566301}
   - component: {fileID: 1694566304}
   - component: {fileID: 1694566305}
+  - component: {fileID: 1694566306}
   m_Layer: 10
   m_Name: FlyingEyeGFX
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14956,6 +14958,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1694566301}
   maxHealth: 100
+--- !u!135 &1694566306
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694566300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11905646
+  m_Center: {x: 0.0599913, y: -0.020686686, z: 0}
 --- !u!1 &1722745973
 GameObject:
   m_ObjectHideFlags: 0
@@ -15967,7 +15982,7 @@ GameObject:
   - component: {fileID: 1884967186}
   - component: {fileID: 1884967188}
   - component: {fileID: 1884967187}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16091,7 +16106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1934608827
 Transform:
   m_ObjectHideFlags: 0
@@ -16104,7 +16119,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 649921887}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1934608830
 SpriteRenderer:
@@ -16145,7 +16160,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 464f82626e63eec4c8f64ee0e7613649, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16981,7 +16996,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 649921887}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2111579793
 PrefabInstance:
