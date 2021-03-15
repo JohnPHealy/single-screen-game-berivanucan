@@ -10,6 +10,12 @@ public class Climb : MonoBehaviour
     public bool bottomLadder = false;
     public bool topLadder = false;
 
+    private void ClimbMovement()
+    {
+        if (canClimb && Mathf.Abs(Input.GetAxis("Verical")) > .1f)
+        {
 
+        }
+    }
 
 }

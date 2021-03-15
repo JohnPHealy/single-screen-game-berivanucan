@@ -7,12 +7,15 @@ public class PlayerMovement : MonoBehaviour
 
 	public CharacterController2D controller;
 	public Animator animator;
+	public Rigidbody2D rb;
 
 	public float runSpeed = 40f;
 
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
+	bool canClimb = false;
+	float climbForce = 10f;
 
 	// Update is called once per frame
 	void Update()
@@ -36,7 +39,19 @@ public class PlayerMovement : MonoBehaviour
 		{
 			crouch = false;
 		}
-
+		/*if(canClimb && Input.GetButtonDown("ClimbUp"))
+        {
+			Debug.Log("I can climb");
+			canClimb = true;
+			animator.SetBool("canClimb", true);
+		}
+		if (canClimb && Input.GetButtonDown("ClimbDown"))
+		{
+			Debug.Log("I can climb");
+			canClimb = true;
+			animator.SetBool("canClimb", true);
+		}
+		*/
 	}
 
 	public void OnLanding()
@@ -49,18 +64,62 @@ public class PlayerMovement : MonoBehaviour
 		animator.SetBool("IsCrouching", isCrouching);
 	}
 
-    private void OnTriggerEnter2D(Collider2D other)
+	private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Potion"))
         {
 			Destroy(other.gameObject);
         }
-    }
+		/*if (other.gameObject.CompareTag("Ladder")  && (Input.GetButtonDown("ClimbUp") || Input.GetButtonDown("ClimbDown")))
+		{
+			Debug.Log("I collided");
+			canClimb = true;
+		}
+		*/
+	}
+	
+	/*
 
-    void FixedUpdate()
+    private void OnTriggerExit2D(Collider2D other)
+    {
+
+		if (other.gameObject.CompareTag("Ladder")  && (Input.GetButtonDown("ClimbUp") || Input.GetButtonDown("ClimbDown")))
+		{
+			animator.SetBool("canClimb", false);
+			canClimb = false;
+		}
+	}
+
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		// Stops the player from being affected by gravity while on ladder
+		if (other.gameObject.CompareTag("Ladder"))
+			rb.gravityScale = 0;
+	}
+
+	private void OnTriggerStay2D(Collider2D other)
+	{
+		if (!(other.gameObject.CompareTag("Ladder")))
+			return;
+
+		float y = Input.GetAxis("Vertical");
+		animator.SetBool("canClimb", true);
+		rb.transform.Translate(new Vector3(0, 1f, 0), 0);
+	}
+
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		// Stops the player from being affected by gravity while on ladder
+		if (other.gameObject.CompareTag("Ladder"))
+			rb.gravityScale = 3;
+	}
+
+	*/
+	void FixedUpdate()
 	{
 		// Move our character
-		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump, canClimb);
 		jump = false;
 	}
 }
