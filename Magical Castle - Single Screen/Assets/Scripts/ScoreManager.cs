@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour
     public void ChangeScore(int potionValue)
     {
         score += potionValue;
-        text.text = "X" + score.ToString();
+        text.text = "" + score.ToString();
     }
 
 
