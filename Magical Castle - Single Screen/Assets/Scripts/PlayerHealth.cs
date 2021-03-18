@@ -9,6 +9,9 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 10;
     public int currentHealth;
     public HealthBar healthBar;
+    public AudioSource collectAudio;
+    public AudioSource deathAudio;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,10 +40,11 @@ public class PlayerHealth : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("BluePotion") || collision.gameObject.CompareTag("GreenPotion") || collision.gameObject.CompareTag("PurplePotion") || collision.gameObject.CompareTag("RedPotion") || collision.gameObject.CompareTag("YellowPotion"))
         {
-            
+            collectAudio.Play();
             ScoreManager.instance.ChangeScore(1);
             Destroy(collision.gameObject);
             Heal(collision.gameObject.tag);
+            Debug.Log("I collided");
         }
     }
 
@@ -48,41 +52,51 @@ public class PlayerHealth : MonoBehaviour
     {
 
         currentHealth -= damage;
+        deathAudio.Play();
         healthBar.SetHealth(currentHealth);
+
 
         if (currentHealth <= 0)
         {
+            deathAudio.Play();
+            animator.SetBool("isDead", true);
             Die();
         }
     }
 
     public void Heal(string heal)
     {
-        switch(heal)
+        Debug.Log("Before Switch");
+        switch (heal)
         {
             case "BluePotion":
                 {
                     currentHealth += 1;
+                    Debug.Log("After Switch");
                 }
                 break;
             case "GreenPotion":
                 {
                     currentHealth += 3;
+                    Debug.Log("After Switch");
                 }
                 break;
             case "PurplePotion":
                 {
                     currentHealth += 2;
+                    Debug.Log("After Switch");
                 }
                 break;
             case "RedPotion":
                 {
                     currentHealth += 4;
+                    Debug.Log("After Switch");
                 }
                 break;
             case "YellowPotion":
                 {
                     currentHealth += 1;
+                    Debug.Log("After Switch");
                 }
                 break;
 
@@ -98,20 +112,22 @@ public class PlayerHealth : MonoBehaviour
     }
 
    
-    void Die()
+    public void Die()
     {
         Debug.Log("player died");
+        deathAudio.Play();
         animator.SetBool("isDead", true);
 
+        Invoke("ReturnMenu", 2f);
+
         GetComponent<Collider2D>().enabled = false;
-       
-       
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        this.enabled = false;
 
     }
+    
 
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
-   
 }
