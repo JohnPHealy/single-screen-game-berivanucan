@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public Animator animator;
-    public int maxHealth = 5;
+    public int maxHealth = 10;
     public int currentHealth;
     public HealthBar healthBar;
 
@@ -29,11 +29,18 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Hey I need to die artik!");
+        
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Hey I need to die!");
+            
             TakeDamage(1);
+        }
+        if (collision.gameObject.CompareTag("BluePotion") || collision.gameObject.CompareTag("GreenPotion") || collision.gameObject.CompareTag("PurplePotion") || collision.gameObject.CompareTag("RedPotion") || collision.gameObject.CompareTag("YellowPotion"))
+        {
+            
+            ScoreManager.instance.ChangeScore(1);
+            Destroy(collision.gameObject);
+            Heal(collision.gameObject.tag);
         }
     }
 
@@ -46,6 +53,47 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    public void Heal(string heal)
+    {
+        switch(heal)
+        {
+            case "BluePotion":
+                {
+                    currentHealth += 1;
+                }
+                break;
+            case "GreenPotion":
+                {
+                    currentHealth += 3;
+                }
+                break;
+            case "PurplePotion":
+                {
+                    currentHealth += 2;
+                }
+                break;
+            case "RedPotion":
+                {
+                    currentHealth += 4;
+                }
+                break;
+            case "YellowPotion":
+                {
+                    currentHealth += 1;
+                }
+                break;
+
+        }
+
+
+        if (currentHealth <= maxHealth)
+        {
+           
+            healthBar.SetHealth(currentHealth);
+            
         }
     }
 

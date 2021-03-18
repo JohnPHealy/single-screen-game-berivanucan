@@ -727,7 +727,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8939424880290257545, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8939424880290257546, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_Name
@@ -735,7 +735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8939424880290257546, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: GreenPotion
       objectReference: {fileID: 0}
     - target: {fileID: 8939424880290257547, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_RootOrder
@@ -1048,7 +1048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5664566162772737427, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5664566162772737438, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
       propertyPath: m_Name
@@ -1056,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5664566162772737438, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: YellowPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
@@ -1204,11 +1204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656208, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: RedPotion
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656213, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656214, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1342,11 +1342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656208, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: RedPotion
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656213, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656214, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1768,7 +1768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358059847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8165519, y: -2.790028, z: 12.698829}
+  m_LocalPosition: {x: -1.8165519, y: -2.8415284, z: 12.698829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 477276861}
@@ -3023,7 +3023,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2782441580468136496, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2782441580468136509, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_Name
@@ -3031,7 +3031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782441580468136509, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: PurplePotion
       objectReference: {fileID: 0}
     - target: {fileID: 2782441580468136510, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_RootOrder
@@ -3868,7 +3868,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649921885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.48, y: -4.7, z: 0}
+  m_LocalPosition: {x: -6.48, y: -4.803, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1934608827}
@@ -4061,7 +4061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 649921893}
-  maxHealth: 5
+  maxHealth: 10
   currentHealth: 0
   healthBar: {fileID: 995240843}
 --- !u!114 &649921896
@@ -8381,7 +8381,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2782441580468136496, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2782441580468136509, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_Name
@@ -8389,7 +8389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782441580468136509, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: PurplePotion
       objectReference: {fileID: 0}
     - target: {fileID: 2782441580468136510, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_RootOrder
@@ -8595,7 +8595,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 7704680264974248609, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7704680264974248610, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_Name
@@ -8603,7 +8603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7704680264974248610, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: BluePotion
       objectReference: {fileID: 0}
     - target: {fileID: 7704680264974248611, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_RootOrder
@@ -8997,7 +8997,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.3333473
+  orthographic size: 1.3416808
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9021,7 +9021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365332147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8165519, y: -2.790028, z: 2.6988287}
+  m_LocalPosition: {x: -1.8165519, y: -2.8415284, z: 2.6988287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 477276861}
@@ -9601,11 +9601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656208, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: RedPotion
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656213, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656214, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15635,7 +15635,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8939424880290257545, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8939424880290257546, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_Name
@@ -15643,7 +15643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8939424880290257546, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: GreenPotion
       objectReference: {fileID: 0}
     - target: {fileID: 8939424880290257547, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_RootOrder
@@ -17166,7 +17166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752491518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8165519, y: -2.790028, z: 2.6988287}
+  m_LocalPosition: {x: -1.8165519, y: -2.8415284, z: 2.6988287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2072212974}
@@ -17755,7 +17755,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 7704680264974248609, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7704680264974248610, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_Name
@@ -17763,7 +17763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7704680264974248610, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: BluePotion
       objectReference: {fileID: 0}
     - target: {fileID: 7704680264974248611, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_RootOrder
@@ -19588,7 +19588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5664566162772737427, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5664566162772737438, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
       propertyPath: m_Name
@@ -19596,7 +19596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5664566162772737438, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: YellowPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
@@ -19770,7 +19770,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2782441580468136496, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2782441580468136509, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_Name
@@ -19778,7 +19778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782441580468136509, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: PurplePotion
       objectReference: {fileID: 0}
     - target: {fileID: 2782441580468136510, guid: bb104b0d37c63e941bb2abce2d27ca5a, type: 3}
       propertyPath: m_RootOrder
@@ -19887,7 +19887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5664566162772737427, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5664566162772737438, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
       propertyPath: m_Name
@@ -19895,7 +19895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5664566162772737438, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: YellowPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c3772a864e5c5244969ea3fa15076e4, type: 3}
@@ -19912,11 +19912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656208, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: RedPotion
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656213, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5957299951446656214, guid: db52d360a5cbc044c80dd2629637bf7b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -20110,7 +20110,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 7704680264974248609, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7704680264974248610, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_Name
@@ -20118,7 +20118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7704680264974248610, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: BluePotion
       objectReference: {fileID: 0}
     - target: {fileID: 7704680264974248611, guid: e42548393f01e804e9855734a28c151d, type: 3}
       propertyPath: m_RootOrder
@@ -20179,7 +20179,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8939424880290257545, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8939424880290257546, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_Name
@@ -20187,7 +20187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8939424880290257546, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_TagString
-      value: Potion
+      value: GreenPotion
       objectReference: {fileID: 0}
     - target: {fileID: 8939424880290257547, guid: 8a74454021eb2bd4aa7fbdd715b137d1, type: 3}
       propertyPath: m_RootOrder
